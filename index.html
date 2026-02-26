@@ -80,10 +80,12 @@ select {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .panel {
     flex: 1;
+    min-width: 260px;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -158,17 +160,61 @@ For a more detailed analysis of a specific neighborhood, price range, or propert
 
 <script>
 const data = {
+  "Antioch": {
+    sales: { 2025: 432070, 2026: 400950 },
+    rent: { 2025: 2005, 2026: 1975 }
+  },
+  "Brentwood": {
+    sales: { 2025: 1150000, 2026: 1350000 },
+    rent: { 2025: 3400, 2026: 3550 }
+  },
+  "Franklin": {
+    sales: { 2025: 1100000, 2026: 1139900 },
+    rent: { 2025: 2995, 2026: 3100 }
+  },
+  "Gallatin": {
+    sales: { 2025: 505000, 2026: 453725 },
+    rent: { 2025: 2100, 2026: 2050 }
+  },
+  "Hendersonville": {
+    sales: { 2025: 530000, 2026: 500000 },
+    rent: { 2025: 2125, 2026: 2150 }
+  },
+  "Hermitage": {
+    sales: { 2025: 408000, 2026: 394500 },
+    rent: { 2025: 2147, 2026: 1975 }
+  },
+  "Lebanon": {
+    sales: { 2025: 420000, 2026: 399000 },
+    rent: { 2025: 1780, 2026: 1825 }
+  },
+  "Madison": {
+    sales: { 2025: 385000, 2026: 367500 },
+    rent: { 2025: 1650, 2026: 1700 }
+  },
   "Mount Juliet": {
     sales: { 2025: 515000, 2026: 495000 },
     rent: { 2025: 2350, 2026: 2400 }
+  },
+  "Murfreesboro": {
+    sales: { 2025: 390000, 2026: 375000 },
+    rent: { 2025: 1932, 2026: 1900 }
   },
   "Nashville": {
     sales: { 2025: 585000, 2026: 572500 },
     rent: { 2025: 2300, 2026: 2250 }
   },
-  "Brentwood": {
-    sales: { 2025: 1150000, 2026: 1350000 },
-    rent: { 2025: 3400, 2026: 3550 }
+  "Nolensville": {
+    sales: { 2025: 894950, 2026: 767500 },
+    rent: { 2025: 2572, 2026: 2600 }
+  },
+  "Old Hickory": {
+    sales: { 2025: 407475, 2026: 379000 },
+    rent: { 2025: 2147, 2026: 2100 }
+  },
+  "Spring Hill": {
+    sales: { 2025: 512875, 2026: 501890 },
+    rent: { 2025: 2122, 2026: 2200 }
   }
 };
 
