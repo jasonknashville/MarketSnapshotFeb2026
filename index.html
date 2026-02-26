@@ -225,7 +225,21 @@ const changeText = document.getElementById("changeText");
 const salesBtn = document.getElementById("salesBtn");
 const rentBtn = document.getElementById("rentBtn");
 
-Object.keys(data).sort().forEach(city => {
+// Create sorted list
+const cities = Object.keys(data).sort();
+
+// Remove Nashville from list
+const otherCities = cities.filter(city => city !== "Nashville");
+
+// Add Nashville first
+const nashvilleOption = document.createElement("option");
+nashvilleOption.value = "Nashville";
+nashvilleOption.textContent = "Nashville";
+nashvilleOption.selected = true;
+citySelect.appendChild(nashvilleOption);
+
+// Add remaining cities alphabetically
+otherCities.forEach(city => {
   const option = document.createElement("option");
   option.value = city;
   option.textContent = city;
